@@ -1,6 +1,6 @@
 /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
-function devolverPrimerElemento(array) {
+function devolverPrimerElemento(array) { //[1,2,3]
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
    return array[0];
