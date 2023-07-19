@@ -219,20 +219,32 @@ function mayorACien(array) { // [0,1,2,3,4...200]
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
-
-function breakStatement(num) {
+//                                 i
+function breakStatement(num) { // [0, 2, 4, 6]
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
    // Guardar cada nuevo valor en un arreglo y retornarlo.
    // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   var sumar = []
+   var nuevoArray = []
+   
 
-   for (var i = 0; i < 10; i += 2) {
-      sumar[i] = 2 + i
+   for (var i = 0; i < 10; i ++) {
+      num = num + 2;
+      
+      if (num === i) {
+         break; 
+      } else {
+         nuevoArray.push(num)
+      }
    }
-   return sumar;
+
+   if (i < 10) {
+      return "Se interrumpió la ejecución"
+   } else {
+      return nuevoArray;
+   }
 }
 
 function continueStatement(num) {
@@ -242,6 +254,19 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var nuevoArray = []
+   
+
+   for (var i = 0; i < 10; i ++) {
+      
+      if (i === 5) {
+         continue; 
+      } else {
+         num = num +2
+         nuevoArray.push(num)
+      }
+   }
+   return nuevoArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
@@ -268,3 +293,4 @@ module.exports = {
    breakStatement,
    continueStatement,
 };
+ console.log(breakStatement(8))
